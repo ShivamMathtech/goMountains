@@ -1,0 +1,203 @@
+{
+  "info": {
+    "name": "Tour & Travel Backend API",
+    "_postman_id": "1a2b3c4d-5e6f-7890-abcd-ef1234567890",
+    "description": "Complete API test collection for Tour & Travel backend. Contains user, tour, booking, and review modules with raw JSON examples.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "User Routes",
+      "item": [
+        {
+          "name": "Register User",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Shivam Singh\",\n  \"email\": \"shivam@example.com\",\n  \"password\": \"12345678\",\n  \"role\": \"user\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/users/register",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "users", "register"]
+            }
+          }
+        },
+        {
+          "name": "Login User",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"shivam@example.com\",\n  \"password\": \"12345678\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/users/login",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "users", "login"]
+            }
+          }
+        },
+        {
+          "name": "Get All Users",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:5000/api/v1/users",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "users"]
+            }
+          }
+        },
+        {
+          "name": "Get Single User",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:5000/api/v1/users/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "users", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tour Routes",
+      "item": [
+        {
+          "name": "Create Tour",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Taj Mahal Experience\",\n  \"description\": \"Explore the beauty of Taj Mahal with guided tours.\",\n  \"price\": 2500,\n  \"duration\": 2,\n  \"location\": \"Agra\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/tours",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "tours"]
+            }
+          }
+        },
+        {
+          "name": "Get All Tours",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:5000/api/v1/tours",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "tours"]
+            }
+          }
+        },
+        {
+          "name": "Update Tour",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"price\": 2999\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/tours/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "tours", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Booking Routes",
+      "item": [
+        {
+          "name": "Create Booking",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"USER_ID\",\n  \"tourId\": \"TOUR_ID\",\n  \"date\": \"2025-11-10\",\n  \"seats\": 2\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/bookings",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "bookings"]
+            }
+          }
+        },
+        {
+          "name": "Get All Bookings",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:5000/api/v1/bookings",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "bookings"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Review Routes",
+      "item": [
+        {
+          "name": "Add Review",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"USER_ID\",\n  \"tourId\": \"TOUR_ID\",\n  \"rating\": 5,\n  \"comment\": \"Amazing experience!\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/reviews",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "reviews"]
+            }
+          }
+        },
+        {
+          "name": "Get All Reviews",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:5000/api/v1/reviews",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "reviews"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
