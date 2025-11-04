@@ -18,7 +18,7 @@ goMountains is a Go-based application designed to help you explore, analyze, or 
 
 ### Prerequisites
 
-- [Go](https://golang.org/doc/install) 1.18 or higher
+- Express and basics of the JavaScripts And Node
 
 ### Installation
 
