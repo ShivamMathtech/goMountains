@@ -9,7 +9,7 @@ goMountains is a Go-based application designed to help you explore, analyze, or 
 
 ## Features
 
-- ✨ Built with [Go](https://golang.org/)
+- ✨ Built with [Nodejs]
 - 📦 Modular and easy to extend
 - ⚡ Fast and efficient
 - 🏔️ Focused on mountain-related data (customize as per your project description)
